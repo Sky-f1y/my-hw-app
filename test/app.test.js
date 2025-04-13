@@ -7,7 +7,7 @@ let server;
 
 describe('GET /', () => {
   before((done) => {
-    server = app.listen(6969, done);
+    server = app.listen(7000, done);
   });
 
   after(() => {
@@ -15,7 +15,7 @@ describe('GET /', () => {
   });
 
   it('should return the expected JSON', (done) => {
-    http.get('http://localhost:6969/', (res) => {
+    http.get('http://localhost:7000/', (res) => {
       let data = '';
       res.on('data', chunk => { data += chunk; });
       res.on('end', () => {
